@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sonja & Robin</title>
+
+    <!-- Bootstrap (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mea+Culpa" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" />
+</head>
+
+<body>
+    <!-- Encapsulating images -->
+    <img class="corner-img top-right" src="img/blomster_right.png" alt="" />
+    <img class="corner-img bottom-left" src="img/blomster_left.png" alt="" />
+
+    <main class="content-layer" id="top">
+        <nav class="navbar navbar-expand-md mb-4">
+            <div class="container d-flex align-items-center">
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+                    aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand fw-semibold font1 mb-0 title" href="#home" data-i18n-no="Sonja og Robin"
+                    data-i18n-en="Sonja & Robin"></a>
+
+                <div class="collapse navbar-collapse navlinks" id="navLinks">
+                    <ul class="navbar-nav ms-auto gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link font2" href="#schedule" data-i18n-no="Program"
+                                data-i18n-en="Schedule"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font2" href="#info" data-i18n-no="Informasjon"
+                                data-i18n-en="Information"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font2" href="#news" data-i18n-no="Oppdateringer" data-i18n-en="News"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font2" href="#photos" data-i18n-no="Bilder" data-i18n-en="Photos"></a>
+                        </li>
+                    </ul>
+                    <div class="ms-md-3 d-flex gap-2 align-items-center">
+                        <button class="btn btn-sm btn-outline-secondary" type="button" data-lang="no">NO</button>
+                        <button class="btn btn-sm btn-outline-secondary" type="button" data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero -->
+        <section class="pt-4" id="home">
+            <div class="container">
+                <h2 class="font1" data-i18n-no="Vi gifter oss!" data-i18n-en="We're getting married!"></h2>
+
+                <p class="font2" data-i18n-no="Vi skal gifte oss og vil gjerne invitere deg til å feire dagen med oss!"
+                    data-i18n-en="We're getting married and would love to invite you to celebrate with us!"></p>
+                <div class="container">
+                    <div class="calendar-wrap mx-auto">
+                        <div class="calendar-paper">
+                            <div class="calendar-header">
+                                <div class="calendar-month" data-i18n-no="JUNI" data-i18n-en="JUNE">
+                                </div>
+                                <div class="calendar-year">2026</div>
+                            </div>
+
+                            <div class="calendar-grid text-center">
+                                <div class="cal-dow" data-i18n-no="Man" data-i18n-en="Mon"></div>
+                                <div class="cal-dow" data-i18n-no="Tir" data-i18n-en="Tue"></div>
+                                <div class="cal-dow" data-i18n-no="Ons" data-i18n-en="Wed"></div>
+                                <div class="cal-dow" data-i18n-no="Tor" data-i18n-en="Thu"></div>
+                                <div class="cal-dow" data-i18n-no="Fre" data-i18n-en="Fri"></div>
+                                <div class="cal-dow" data-i18n-no="Lør" data-i18n-en="Sat"></div>
+                                <div class="cal-dow" data-i18n-no="Søn" data-i18n-en="Sun"></div>
+
+                                <div class="cal-day">1</div>
+                                <div class="cal-day">2</div>
+                                <div class="cal-day">3</div>
+                                <div class="cal-day">4</div>
+
+                                <div class="cal-day">5</div>
+                                <div class="cal-day">6</div>
+                                <div class="cal-day">7</div>
+                                <div class="cal-day">8</div>
+                                <div class="cal-day">9</div>
+                                <div class="cal-day">10</div>
+                                <div class="cal-day">11</div>
+
+                                <div class="cal-day">12</div>
+                                <div class="cal-day cal-selected" aria-label="Selected date: June 11, 2026">
+                                    <span>13</span>
+                                </div>
+                                <div class="cal-day">14</div>
+                                <div class="cal-day">15</div>
+                                <div class="cal-day">16</div>
+                                <div class="cal-day">17</div>
+                                <div class="cal-day">18</div>
+                                <div class="cal-day">19</div>
+
+                                <div class="cal-day">20</div>
+                                <div class="cal-day">21</div>
+                                <div class="cal-day">22</div>
+                                <div class="cal-day">23</div>
+                                <div class="cal-day">24</div>
+                                <div class="cal-day">25</div>
+                                <div class="cal-day">26</div>
+                                <div class="cal-day">27</div>
+                                <div class="cal-day">28</div>
+                                <div class="cal-day">29</div>
+                                <div class="cal-day">30</div>
+
+
+                                <!-- …continue the month as needed -->
+                            </div>
+
+                            <div class="calendar-footer text-center">
+                                <div class="calendar-date" data-i18n-no="Lørdag, 13. Juni, 2026"
+                                    data-i18n-en="Saturday, June 11, 2026"></div>
+                                <div class="calendar-sub" data-i18n-no="Vielse starter 14:00 • Moss"
+                                    data-i18n-en="Ceremony at 14:00 • Oslo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        <section id="invitasjon">
+            <div class="container">
+                <p class="font2" data-i18n-no="Vielse og fest arrangeres på Refsnes Gods i Moss." data-i18n-en="TODO">
+                </p>
+                <p class="font2" data-i18n-no="Kleskode: Dress" data-i18n-en="TODO"></p>
+                <p class="font2" data-i18n-no="Svarfrist innen 1. mars 2026." data-i18n-en="TODO"></p>
+                <p class="font2" data-i18n-no="Si gjerne ifra om allergier og intoleranser innen svarfristen."
+                    data-i18n-en="TODO"></p>
+                <p class="font2"
+                    data-i18n-no="Program for dagen og annen praktisk informasjon finnes på nettsiden vår som er linket på baksiden."
+                    data-i18n-en="TODO"></p>
+            </div>
+        </section>
+        <section id="schedule">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold mb-1 font2" data-i18n-no="Program" data-i18n-en="Schedule"></h2>
+                    <p class="text-muted mb-0 font2" data-i18n-no="Plan for dagen"
+                        data-i18n-en="A little plan for the day"></p>
+                </div>
+
+                <div class="schedule">
+                    <!-- Item -->
+                    <div class="schedule-item">
+                        <div class="schedule-time">13:30</div>
+                        <div class="schedule-dot" aria-hidden="true"></div>
+                        <div class="schedule-card">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div>
+                                    <div class="schedule-title" data-i18n-no="Gjestene ankommer"
+                                        data-i18n-en="Guests arrive"></div>
+                                    <div class="schedule-meta" data-i18n-no="Refsnes Gods" data-i18n-en="Refsnes Gods">
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="schedule-icon icon-welcome" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-time">14:00</div>
+                        <div class="schedule-dot" aria-hidden="true"></div>
+                        <div class="schedule-card">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div>
+                                    <div class="schedule-title" data-i18n-no="Vielse" data-i18n-en="Ceremony"></div>
+                                    <div class="schedule-meta" data-i18n-no="Refsnes Gods" data-i18n-en="Refsnes Gods">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <img src="./img/refsnes2.png" class="schedule-icon-svg" alt="Refsnes Gods"
+                                aria-hidden="true" />
+                        </div>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-time">14:45</div>
+                        <div class="schedule-dot" aria-hidden="true"></div>
+                        <div class="schedule-card">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div>
+                                    <div class="schedule-title" data-i18n-no="Bilder og mingling"
+                                        data-i18n-en="Photos & mingle"></div>
+                                    <div class="schedule-meta" data-i18n-no="Ute (hvis været tillater det)"
+                                        data-i18n-en="Outside (weather permitting)"></div>
+                                </div>
+                            </div>
+                            <span class="schedule-icon icon-photos" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-time">16:00</div>
+                        <div class="schedule-dot" aria-hidden="true"></div>
+                        <div class="schedule-card">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div>
+                                    <div class="schedule-title" data-i18n-no="Middag" data-i18n-en="Dinner"></div>
+                                    <div class="schedule-meta" data-i18n-no="Middag i hovedsalen"
+                                        data-i18n-en="Seated dinner begins"></div>
+                                </div>
+                            </div>
+                            <span class="schedule-icon icon-dinner" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="schedule-item">
+                        <div class="schedule-time">19:30</div>
+                        <div class="schedule-dot" aria-hidden="true"></div>
+                        <div class="schedule-card">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div>
+                                    <div class="schedule-title" data-i18n-no="Taler" data-i18n-en="Speeches"></div>
+                                    <div class="schedule-meta" data-i18n-no="TODO" data-i18n-en="Short + sweet ❤️"></div>
+                                </div>
+                            </div>
+                            <span class="schedule-icon icon-speeches" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                -->
+                    <div class="schedule-item">
+                        <div class="schedule-time">21:00</div>
+                        <div class="schedule-dot" aria-hidden="true"></div>
+                        <div class="schedule-card">
+                            <div class="d-flex align-items-start justify-content-between gap-3">
+                                <div>
+                                    <div class="schedule-title" data-i18n-no="Fest" data-i18n-en="Party"></div>
+                                    <div class="schedule-meta" data-i18n-no="Fest utover kvelden"
+                                        data-i18n-en="Party throughout the evening"></div>
+                                </div>
+                                <!-- <span class="badge text-bg-dark">Party</span> -->
+                            </div>
+                            <span class="schedule-icon icon-party" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="info-section">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold mb-1" data-i18n-no="Praktisk informasjon" data-i18n-en="Practical information">
+                    </h2>
+                    <p class="text-muted mb-0" data-i18n-no="Nyttig informasjon for å planlegge dagen"
+                        data-i18n-en="Useful information to plan the day"></p>
+                </div>
+
+                <div class="row g-3 g-md-4">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-title" data-i18n-no="Lokasjon" data-i18n-en="Location"></div>
+                            <div class="info-body">
+                                <div class="text-muted">Refsnes Gods</div>
+                                <div data-i18n-no="Godset 5, N-1518 Moss" data-i18n-en="Godset 5, N-1518 Moss, Norway">
+                                </div>
+                                <a class="link-primary d-inline-block mt-2"
+                                    href="https://maps.app.goo.gl/bcm8GeUxv8fPS4wA7" target="_blank" rel="noopener"
+                                    data-i18n-no="Åpne i Google maps" data-i18n-en="Open in Google maps"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-title" data-i18n-no="Kleskode" data-i18n-en="Dress code"></div>
+                            <div class="info-body">
+                                <div data-i18n-no="Dress" data-i18n-en="Black-tie"></div>
+                                <div class="text-muted mt-1"
+                                    data-i18n-no="Vielsen er utendørs hvis været er bra, så ta med passende klær"
+                                    data-i18n-en="Ceremony is outside, weather permitting, so bring suitable clothes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-title" data-i18n-no="Gaver" data-i18n-en="Gifts"></div>
+                            <div class="info-body">
+                                <div>TODO</div>
+                                <div class="text-muted mt-1">TODO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-title" data-i18n-no="Mat og allergier" data-i18n-en="Food & allergies">
+                            </div>
+                            <div class="info-body" data-i18n-no="Vennligst fortell oss om allergier når du svarer"
+                                data-i18n-en="Please tell us about allergies or dietary preferences when you RSVP.">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-title" data-i18n-no="Kontakt" data-i18n-en="Contact"></div>
+                            <a target="_blank" rel="noopener noreferrer" href="mailto:todo">TODO</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <div class="info-title">Link for booking</div>
+                            <a target="_blank" rel="noopener noreferrer" href="TODO">TODO</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="info-card">
+                            <div class="info-title" data-i18n-no="Transport" data-i18n-en="Transport"></div>
+                            <div class="info-body">
+                                <div class="icon-list">
+                                    <div class="icon-list-item"
+                                        data-i18n-no="Hvis du kommer med bil er det greit med parkering på stedet"
+                                        data-i18n-en="TODO"></div>
+                                    <div class="icon-list-item" data-i18n-no="Nærmeste togstasjon er Moss stasjon"
+                                        data-i18n-en="TODO"></div>
+                                    <div class="icon-list-item" data-i18n-no="Fra Moss stasjon kan du ta buss 20"
+                                        data-i18n-en="TODO"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news-section">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <div>
+                        <h2 class="fw-bold mb-1" data-i18n-no="Oppdateringer" data-i18n-en="News & updates"></h2>
+                        <p class="text-muted mb-0" data-i18n-no="Små oppdatering etterhvert som dagen nærmer seg"
+                            data-i18n-en="Small announcements as the day gets closer"></p>
+                    </div>
+                    <span class="badge text-bg-light border">Last updated: 2026-01-02</span>
+                </div>
+
+                <div class="news-list">
+                    <article class="news-item">
+                        <div class="news-date">Jan 2</div>
+                        <div class="news-card">
+                            <div class="news-title" data-i18n-no="Nettsiden publisert"
+                                data-i18n-en="Web site published"></div>
+                            <div class="news-body" data-i18n-no="Nettsiden ble først publisert"
+                                data-i18n-en="Intial web site was published"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="photos" class="photos-section">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold mb-1" data-i18n-no="Bilder" data-i18n-en="Photos"></h2>
+
+                </div>
+
+                <!-- Placeholder (shown before wedding) -->
+                <div id="photosPlaceholder" class="card shadow-sm border-0 rounded-4 p-4 text-center">
+                    <div class="text-muted" data-i18n-no="Vi deler bilder her etter bryllupet 📸"
+                        data-i18n-en="We'll share photos here after the wedding 📸"></div>
+                </div>
+
+
+                <!-- Gallery (shown after wedding) -->
+                <div id="photosLock" class="card shadow-sm border-0 rounded-4 p-4">
+                    <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3">
+                        <div>
+                            <div class="h5 mb-1" data-i18n-no="Lås opp bilder" data-i18n-en="Unlock photos"></div>
+                            <div class="text-muted" data-i18n-no="Skriv inn passord for å dekryptere bilder"
+                                data-i18n-en="Enter the password to view the gallery."></div>
+                        </div>
+
+                        <form id="unlockForm" class="d-flex gap-2 flex-wrap">
+                            <input id="unlockPassword" type="password" class="form-control" placeholder="Password"
+                                required>
+                            <button class="btn btn-primary" type="submit">Unlock</button>
+                        </form>
+                    </div>
+
+                    <div id="unlockStatus" class="small text-muted mt-3" aria-live="polite"></div>
+                </div>
+                <div id="photosGallery" class="photos-grid d-none" aria-live="polite"></div>
+
+
+
+            </div>
+        </section>
+    </main>
+    <!-- Lightbox modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-4 overflow-hidden">
+                <div class="modal-header border-0">
+                    <div class="modal-title fw-semibold">Photo <span id="photoCounter" class="text-muted"></span></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <div class="lightbox">
+                        <button class="lightbox-nav lightbox-prev" id="prevBtn" type="button"
+                            aria-label="Previous photo">‹</button>
+                        <img id="lightboxImg" class="lightbox-img" alt="Wedding photo" />
+                        <button class="lightbox-nav lightbox-next" id="nextBtn" type="button"
+                            aria-label="Next photo">›</button>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-0 justify-content-between">
+                    <div class="text-muted small" id="photoCaption"></div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-secondary" type="button" id="prevBtn2">Previous</button>
+                        <button class="btn btn-outline-secondary" type="button" id="nextBtn2">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap (JS bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/viewer.js"></script>
+
+    <script>
+        // Close the mobile nav after clicking a link
+        document.querySelectorAll('.navbar .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.getElementById('navLinks');
+                if (nav.classList.contains('show')) {
+                    new bootstrap.Collapse(nav).hide();
+                }
+            });
+        });
+
+        // Footer year (only if the element exists)
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const DEFAULT_LANG = "no";
+        const SUPPORTED = new Set(["no", "en"]);
+
+        function getLang() {
+            const urlLang = new URLSearchParams(location.search).get("lang");
+            const saved = localStorage.getItem("lang");
+            const lang = (urlLang || saved || DEFAULT_LANG).toLowerCase();
+            return SUPPORTED.has(lang) ? lang : DEFAULT_LANG;
+        }
+
+        function setLang(lang) {
+            if (!SUPPORTED.has(lang)) return;
+            localStorage.setItem("lang", lang);
+
+            // Optional: keep URL in sync without reloading
+            const url = new URL(location.href);
+            url.searchParams.set("lang", lang);
+            history.replaceState({}, "", url);
+
+            applyLang(lang);
+        }
+
+        function applyLang(lang) {
+            document.documentElement.setAttribute("lang", lang);
+
+            document.querySelectorAll("[data-i18n-no], [data-i18n-en]").forEach(el => {
+                const value = el.getAttribute(`data-i18n-${lang}`);
+                if (value == null) return;
+
+                // If you ever need HTML markup inside the string, swap to innerHTML
+                el.textContent = value;
+            });
+
+            document.querySelectorAll("[data-lang]").forEach(btn => {
+                btn.classList.toggle("btn-secondary", btn.dataset.lang === lang);
+                btn.classList.toggle("btn-outline-secondary", btn.dataset.lang !== lang);
+            });
+        }
+
+        // Bind buttons
+        document.querySelectorAll("[data-lang]").forEach(btn => {
+            btn.addEventListener("click", () => setLang(btn.dataset.lang));
+        });
+
+        // Init
+        applyLang(getLang());
+    </script>
+    <!-- Scroll to top -->
+    <a href="#top" class="scroll-top-link" aria-label="Scroll to top">
+        ↑
+    </a>
+</body>
+
+</html>
