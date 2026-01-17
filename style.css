@@ -777,3 +777,62 @@ section>.container {
     background-color: rgba(0, 0, 0, 0.08);
     border-color: rgba(0, 0, 0, 0.2);
 }
+
+/* --- Flower arch section separator (Option 2) --- */
+.section-arch {
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.section-arch img {
+    width: 40px;
+    /* visual size of separator */
+    max-width: 60%;
+    height: auto;
+    opacity: 0.45;
+    /* subtle, non-dominant */
+    filter: saturate(0.95);
+    mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+}
+
+/* Mobile tuning */
+/*@media (max-width: 576px){
+    .section-arch{
+      margin: 1.5rem 0 0rem;
+    }
+  
+    .section-arch img{
+      width: 10px;
+      opacity: 0.4;
+    }
+  }*/
+
+
+  .hero-photo {
+    border-radius: 999px; /* gentle oval, wedding-style */
+    padding: 12px;
+    background:
+        radial-gradient(circle at top left,
+            rgba(246, 135, 169, 0.25),
+            rgba(255, 255, 255, 0.85) 60%);
+    box-shadow:
+        0 10px 28px rgba(246, 135, 169, 0.18),
+        0 2px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(246, 135, 169, 0.35);
+    filter: saturate(0.98) contrast(0.97);
+}
+
+/* Subtle vignette to soften the photo edges */
+.hero-photo {
+    -webkit-mask-image: radial-gradient(circle at center, black 62%, transparent 100%);
+    mask-image: radial-gradient(circle at center, black 62%, transparent 100%);
+}
+
+@media (hover: hover) {
+    .hero-photo:hover {
+        box-shadow:
+            0 14px 36px rgba(246, 135, 169, 0.25),
+            0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+}

@@ -63,6 +63,7 @@
         <section class="pt-4" id="home">
             <div class="container">
                 <h2 class="font1" data-i18n-no="Vi gifter oss!" data-i18n-en="We're getting married!"></h2>
+                <img src="./img/Portrett_0_small.jpg" width="300" class="hero-photo img-fluid" alt="Sonja og Robin" />
 
                 <p class="font2" data-i18n-no="Vi skal gifte oss og vil gjerne invitere deg til å feire dagen med oss!"
                     data-i18n-en="We're getting married and would love to invite you to celebrate with us!"></p>
@@ -145,9 +146,6 @@
                 <p class="font2" data-i18n-no="Kleskode: Dress" data-i18n-en="TODO"></p>
                 <p class="font2" data-i18n-no="Svarfrist innen 1. mars 2026." data-i18n-en="TODO"></p>
                 <p class="font2" data-i18n-no="Si gjerne ifra om allergier og intoleranser innen svarfristen."
-                    data-i18n-en="TODO"></p>
-                <p class="font2"
-                    data-i18n-no="Program for dagen og annen praktisk informasjon finnes på nettsiden vår som er linket på baksiden."
                     data-i18n-en="TODO"></p>
             </div>
         </section>
@@ -289,21 +287,20 @@
                             <div class="info-body">
                                 <div data-i18n-no="Dress" data-i18n-en="Black-tie"></div>
                                 <div class="text-muted mt-1"
-                                    data-i18n-no="Vielsen er utendørs hvis været er bra, så ta med passende klær"
+                                    data-i18n-no="Vielsen vil foregå utendørs, så vi oppfordrer til å kle dere etter været."
                                     data-i18n-en="Ceremony is outside, weather permitting, so bring suitable clothes">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
-
                     <div class="col-md-6">
                         <div class="info-card">
                             <div class="info-title" data-i18n-no="Gaver" data-i18n-en="Gifts"></div>
                             <div class="info-body">
-                                <div>TODO</div>
-                                <div class="text-muted mt-1">TODO</div>
+                                <div class="text-muted mt-1"
+                                    data-i18n-no="Det viktigste for oss er å feire dagen sammen med dere. Dersom dere ønsker å gi en gave, vil et bidrag til vår bryllupsreise bli satt stor pris på."
+                                    data-i18n-en="TODO"></div>
                             </div>
                         </div>
                     </div>
@@ -312,7 +309,8 @@
                         <div class="info-card">
                             <div class="info-title" data-i18n-no="Mat og allergier" data-i18n-en="Food & allergies">
                             </div>
-                            <div class="info-body" data-i18n-no="Vennligst fortell oss om allergier når du svarer"
+                            <div class="info-body"
+                                data-i18n-no="Vennligst gi beskjed til oss om allergier og intoleranser innen 1. mars 2026."
                                 data-i18n-en="Please tell us about allergies or dietary preferences when you RSVP.">
                             </div>
                         </div>
@@ -321,13 +319,46 @@
                     <div class="col-md-6">
                         <div class="info-card">
                             <div class="info-title" data-i18n-no="Kontakt" data-i18n-en="Contact"></div>
-                            <a target="_blank" rel="noopener noreferrer" href="mailto:todo">TODO</a>
+                            <div class="info-body">
+                                <span data-i18n-no="Vi kan kontaktes på e-post "
+                                    data-i18n-en="You can reach us by email "></span>
+                                <a class="obf-email" target="_blank" rel="noopener noreferrer"
+                                    data-user="sonjaogrobin" data-domain="gmail.com" data-subject="Bryllup"
+                                    href="#" aria-label="Email"></a>
+                                <span data-i18n-no=" eller telefon "
+                                    data-i18n-en=" or phone "></span>
+                                <span>
+                                    <span class="obf-phone" data-phone="+47 944 98 529" data-label="Sonja"></span>,
+                                    <span class="obf-phone" data-phone="+47 473 01 595" data-label="Robin"></span>.
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12">
                         <div class="info-card">
                             <div class="info-title">Link for booking</div>
-                            <a target="_blank" rel="noopener noreferrer" href="TODO">TODO</a>
+                            <div class="info-body">
+                                
+                                Link for booking <a target="_blank" rel="noopener noreferrer" href="TODO" data-i18n-no="her" data-i18n-en="here">her</a>.
+                                <span data-i18n-no="Innsjekk på hotellet er fra kl. 15:00. Utsjekk er kl. XX. Frokost er inkludert (?). Det
+                                vil være tid for innsjekk mellom vielsen og middagen. Hotellet holder av rom til
+                                bryllupets gjester frem til 13. mars 2026 (?). Etter dette åpner de opp for bestillinger
+                                til eksterne gjester for rommene som ikke er reservert "
+                                    data-i18n-en="TODO"></span>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="info-card">
+                            <div class="info-title">Taler og underholdning</div>
+                            <div class="info-body">
+                                Ønsker du å holde en tale, synge eller bidra med annen underholdning i løpet av
+                                bryllupsdagen, er du hjertelig velkommen til å ta kontakt med oss. Vi tar også gjerne
+                                imot forslag til aktiviteter.
+                            </div>
+
                         </div>
                     </div>
 
@@ -335,15 +366,11 @@
                         <div class="info-card">
                             <div class="info-title" data-i18n-no="Transport" data-i18n-en="Transport"></div>
                             <div class="info-body">
-                                <div class="icon-list">
-                                    <div class="icon-list-item"
-                                        data-i18n-no="Hvis du kommer med bil er det greit med parkering på stedet"
-                                        data-i18n-en="TODO"></div>
-                                    <div class="icon-list-item" data-i18n-no="Nærmeste togstasjon er Moss stasjon"
-                                        data-i18n-en="TODO"></div>
-                                    <div class="icon-list-item" data-i18n-no="Fra Moss stasjon kan du ta buss 20"
-                                        data-i18n-en="TODO"></div>
-                                </div>
+                                Hvis dere ankommer med bil, så er det gratis parkering utenfor hotellet. Hvis dere
+                                ankommer med tog, så er Moss stasjon nærmeste togstasjon. Buss 20 går direkte fra Moss
+                                stasjon til Refsnes (ca. 13 min). For dere som ankommer med tog til Moss stasjon på
+                                selve dagen lørdag 13. juni, har vi noen familiemedlemmer som kan stille opp med skyss
+                                videre til Refsnes Gods. Ta kontakt med oss dersom dere ønsker slik transport.
                             </div>
                         </div>
                     </div>
@@ -484,6 +511,7 @@
             history.replaceState({}, "", url);
 
             applyLang(lang);
+            initObfuscation();
         }
 
         function applyLang(lang) {
@@ -492,8 +520,6 @@
             document.querySelectorAll("[data-i18n-no], [data-i18n-en]").forEach(el => {
                 const value = el.getAttribute(`data-i18n-${lang}`);
                 if (value == null) return;
-
-                // If you ever need HTML markup inside the string, swap to innerHTML
                 el.textContent = value;
             });
 
@@ -510,6 +536,33 @@
 
         // Init
         applyLang(getLang());
+
+        function initObfuscation() {
+            // Email: build address from data attributes at runtime
+            document.querySelectorAll(".obf-email").forEach(a => {
+                const user = a.getAttribute("data-user") || "";
+                const domain = a.getAttribute("data-domain") || "";
+                const subject = a.getAttribute("data-subject") || "";
+                if (!user || !domain) return;
+
+                const email = `${user}@${domain}`;
+                a.textContent = email;
+
+                const params = subject ? `?subject=${encodeURIComponent(subject)}` : "";
+                a.setAttribute("href", `mailto:${email}${params}`);
+            });
+
+            // Phone: render number + label at runtime
+            document.querySelectorAll(".obf-phone").forEach(span => {
+                const phone = span.getAttribute("data-phone") || "";
+                const label = span.getAttribute("data-label") || "";
+                if (!phone) return;
+
+                span.textContent = label ? `${phone} (${label})` : phone;
+            });
+        }
+
+        initObfuscation();
     </script>
     <!-- Scroll to top -->
     <a href="#top" class="scroll-top-link" aria-label="Scroll to top">
