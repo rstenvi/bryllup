@@ -49,11 +49,16 @@
                     <div class="ms-md-3 d-flex gap-2 align-items-center">
                         <button class="btn btn-sm btn-outline-secondary lang-flag" type="button" data-lang="no"
                             aria-label="Norsk">
-                            🇳🇴
+                            <span class="flag-icon" aria-hidden="true">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Norway_%281905%E2%80%932021%29.svg" alt="Norway">
+                            </span>
                         </button>
                         <button class="btn btn-sm btn-outline-secondary lang-flag" type="button" data-lang="en"
                             aria-label="English">
-                            🇬🇧
+                            <span class="flag-icon" aria-hidden="true">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="United Kingdom">
+
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -500,14 +505,12 @@
 
         function getLang() {
             const urlLang = new URLSearchParams(location.search).get("lang");
-            const saved = localStorage.getItem("lang");
-            const lang = (urlLang || saved || DEFAULT_LANG).toLowerCase();
+            const lang = (urlLang || DEFAULT_LANG).toLowerCase();
             return SUPPORTED.has(lang) ? lang : DEFAULT_LANG;
         }
 
         function setLang(lang) {
             if (!SUPPORTED.has(lang)) return;
-            localStorage.setItem("lang", lang);
 
             // Optional: keep URL in sync without reloading
             const url = new URL(location.href);

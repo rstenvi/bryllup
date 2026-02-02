@@ -771,11 +771,21 @@ section>.container {
     font-size: 1.55rem;
     line-height: 1;
     padding: 0.15rem 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lang-flag.btn-secondary {
     background-color: rgba(0, 0, 0, 0.08);
     border-color: rgba(0, 0, 0, 0.2);
+}
+
+.lang-flag img {
+    display: block;
+    width: 1.6rem;
+    height: 1.1rem;
+    object-fit: cover;
 }
 
 /* --- Flower arch section separator (Option 2) --- */
