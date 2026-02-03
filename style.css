@@ -449,11 +449,13 @@ section>.container {
     font-weight: 900;
     letter-spacing: .02em;
     margin-bottom: 6px;
+    font-family: 'Cormorant', serif;
 }
 
 .info-body {
     color: rgba(0, 0, 0, 0.78);
     line-height: 1.45;
+    font-family: 'Cormorant', serif;
 }
 
 /* News list */
