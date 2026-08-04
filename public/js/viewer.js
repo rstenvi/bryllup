@@ -1,5 +1,7 @@
-// Flip this after the wedding
-const PHOTOS_ENABLED = true;
+// Flip this on once public/photos/ has been generated and deployed. Kept false
+// through the Cloudflare migration so guests get the "coming soon" placeholder
+// instead of an unlock form over a 404.
+const PHOTOS_ENABLED = false;
 
 // Where the encrypted assets live
 const PHOTOS_MANIFEST_URL = "/photos/manifest.json";

@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Previous gallery build, kept locally only
+photos.bak/
+
+# Bulk archive produced by `encrypt-photos.mjs --archive`; upload it externally
+# rather than serving it from Pages
+photos-*px.zip
+
+# The encrypted gallery. Deliberately NOT committed: every encrypt-photos.mjs run
+# uses a fresh salt, so all blobs change wholesale and git would keep every
+# version forever. Cloudflare Pages gets them via `wrangler pages deploy public`,
+# straight from disk. This directory is therefore the only copy -- back it up
+# outside the repo, along with the gallery password.
+public/photos/
