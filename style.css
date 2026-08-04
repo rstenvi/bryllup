@@ -671,6 +671,12 @@ section>.container {
     font-family: 'Nanum Myeongjo', serif;
 }
 
+/* Narrower than the grid: 980px of running text is uncomfortable to read. */
+.photos-thanks {
+    max-width: 720px;
+    margin: 0 auto 24px;
+}
+
 .photos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -686,32 +692,47 @@ section>.container {
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
     background: #fff;
     cursor: pointer;
+
+    /* Portrait-shaped cell: most of the gallery is 2:3, so those fill it exactly
+       and are never cropped. Landscape photos sit centred with space above and
+       below. Height derives from the grid column width, so it adapts to every
+       breakpoint without per-breakpoint overrides. */
+    aspect-ratio: 2 / 3;
+
+    /* Skip rendering work for off-screen tiles. aspect-ratio already gives the
+       box a definite height, so no contain-intrinsic-size guess is needed. */
+    content-visibility: auto;
+}
+
+/* Tiles exist before their thumbnail has been fetched and decrypted. */
+.photo-thumb--loading {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.photo-thumb--failed {
+    background: rgba(0, 0, 0, 0.12);
 }
 
 .photo-thumb img {
     width: 100%;
-    height: 210px;
-    object-fit: cover;
+    height: 100%;
+    /* contain, never cover: cropping is what cut the top and bottom off
+       portrait photos. */
+    object-fit: contain;
     display: block;
 }
 
+/* Tile heights follow the column width via aspect-ratio, so these breakpoints
+   only need to change the column count. */
 @media (max-width: 767px) {
     .photos-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .photo-thumb img {
-        height: 170px;
     }
 }
 
 @media (max-width: 420px) {
     .photos-grid {
         grid-template-columns: 1fr;
-    }
-
-    .photo-thumb img {
-        height: 220px;
     }
 }
 

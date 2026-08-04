@@ -519,7 +519,25 @@
 
                     <div id="unlockStatus" class="small text-muted mt-3" aria-live="polite"></div>
                 </div>
-                <div id="photosGallery" class="photos-grid d-none" aria-live="polite"></div>
+                <!-- Thank-you note, revealed together with the gallery -->
+                <div id="photosThanks"
+                    class="photos-thanks card shadow-sm border-0 rounded-4 p-4 text-center d-none">
+                    <div class="info-body"
+                        data-i18n-no="Tusen takk for at dere var med og gjorde bryllupsdagen vår så minnerik. Vi håper dere vil glede dere over bildene like mye som vi gjør. Bildene er ment som et privat minne for familie og venner, og vi setter pris på at de ikke deles videre offentlig uten samtykke."
+                        data-i18n-en="Thank you so much for being there and making our wedding day so memorable. We hope you enjoy the photos as much as we do. They are meant as a private keepsake for family and friends, and we would appreciate it if they were not shared publicly without consent.">
+                    </div>
+                </div>
+
+                <!-- No aria-live here: tiles are added incrementally, which would
+                     announce every one of them. #unlockStatus carries the status. -->
+                <div id="photosGallery" class="photos-grid d-none"></div>
+
+                <!-- Bulk download, revealed after unlock and only when
+                     ARCHIVE_URL is configured in js/viewer.js -->
+                <div id="photosArchive" class="text-center mt-4 d-none">
+                    <a id="photosArchiveLink" class="btn btn-outline-secondary" href="#"
+                        data-i18n-no="Last ned alle bildene" data-i18n-en="Download all photos"></a>
+                </div>
 
 
 
