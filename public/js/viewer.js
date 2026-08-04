@@ -102,9 +102,16 @@ function b64ToBytes(b64) {
 }
 
 async function fetchJson(url) {
-    // no-store: the manifest is how we discover a new build, so it must never
-    // come from cache.
-    const res = await fetch(url, {
+    // The manifest is how we discover a new build, so it must never come from
+    // cache. Two independent guards, because they cover different caches:
+    //
+    //   cache: "no-store" stops the *browser* from reusing a copy.
+    //   ?t=<now> makes the URL unique, which is the only thing that reliably
+    //   defeats a *CDN*. Cloudflare's cache key includes the query string
+    //   (verified), while its edge cache does not honour a request's no-store --
+    //   and a manifest cached against fresh blobs decrypts to nothing.
+    const bust = `${url}${url.includes("?") ? "&" : "?"}t=${Date.now()}`;
+    const res = await fetch(bust, {
         cache: "no-store"
     });
     if (!res.ok) throw new Error(`Failed to fetch ${url} (${res.status})`);
