@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# Wrangler's local state
+.wrangler/
+
 # Previous gallery build, kept locally only
 photos.bak/
 

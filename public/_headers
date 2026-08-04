@@ -5,11 +5,16 @@
 # encrypt-photos.mjs produces a new salt, so a stale manifest paired with fresh
 # blobs decrypts to nothing. viewer.js already fetches it with cache: "no-store",
 # but that only bypasses the browser cache -- this rule keeps Cloudflare's edge
-# from holding onto it too. Must stay above /photos/* to win the overlap.
+# from holding onto it too.
 /photos/manifest.json
   Cache-Control: no-store
 
 # Blobs are immutable by construction: every URL carries ?v=<buildId> (see
 # withBuild() in js/viewer.js), so a new build never reuses an old URL.
-/photos/*
+#
+# Note the /b/ level. Cloudflare MERGES every matching rule into a single header
+# instead of letting the first match win -- verified, a flat /photos/* glob
+# emitted "no-store, public, max-age=31536000, immutable" on manifest.json.
+# Keeping the blobs one level down means these two globs cannot overlap.
+/photos/b/*
   Cache-Control: public, max-age=31536000, immutable

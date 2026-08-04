@@ -27,6 +27,12 @@ const THUMB_QUALITY = 72;
 // variable-size thumbnails.
 const MANIFEST_VERSION = 3;
 
+// Subdirectory under the output folder that holds the encrypted blobs. Keeps
+// manifest.json out of the immutable-cache glob in public/_headers; see the
+// comment where blobDir is created. Not part of the manifest contract -- the
+// viewer only follows the URLs the manifest hands it.
+const BLOB_SUBDIR = "b";
+
 function b64(buf) {
     return buf.toString("base64");
 }
@@ -147,6 +153,17 @@ async function main() {
         recursive: true
     });
 
+    // Blobs go in a subdirectory so the Cloudflare _headers globs cannot overlap.
+    // Cloudflare merges every matching rule into one header rather than letting
+    // the first win, so a flat layout produced the self-contradictory
+    // "no-store, public, max-age=31536000, immutable" on manifest.json. With the
+    // blobs one level down, /photos/b/* is immutable and the manifest is only
+    // matched by its own no-store rule.
+    const blobDir = path.join(outDir, BLOB_SUBDIR);
+    await fs.mkdir(blobDir, {
+        recursive: true
+    });
+
     const files = await listFiles(inDir);
     if (!files.length) {
         console.error("No images found in input folder (jpg/png/webp).");
@@ -197,13 +214,13 @@ async function main() {
         const fullName = `${id}.bin`;
         const thumbName = `${id}-thumb.bin`;
 
-        await fs.writeFile(path.join(outDir, fullName), full.out);
-        await fs.writeFile(path.join(outDir, thumbName), thumb.out);
+        await fs.writeFile(path.join(blobDir, fullName), full.out);
+        await fs.writeFile(path.join(blobDir, thumbName), thumb.out);
 
         manifest.photos.push({
-            blobUrl: `/photos/${fullName}`, // adjust if you host elsewhere
+            blobUrl: `/photos/${BLOB_SUBDIR}/${fullName}`, // adjust if you host elsewhere
             ivB64: b64(full.iv),
-            thumbUrl: `/photos/${thumbName}`,
+            thumbUrl: `/photos/${BLOB_SUBDIR}/${thumbName}`,
             thumbIvB64: b64(thumb.iv),
             mime: "image/jpeg",
             caption: "" // fill later if you want
